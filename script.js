@@ -83,9 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     const policyText = policyList.getAttribute(`data-${targetLang}-policy`);
                     if (policyText) {
                         // Simple way to update list items based on the attribute content
-                        // We need to ensure the list items are wrapped in <li> tags
-                        const listItems = policyText.split('<li>').filter(item => item.trim() !== '').map(item => `<li>${item.replace('</li>', '').trim()}</li>`).join('');
-                        policyList.innerHTML = listItems;
+                        // Set the innerHTML directly from the data attribute, which contains the <li> elements.
+                        policyList.innerHTML = policyText;
                     }
                 }
             }
