@@ -130,6 +130,729 @@
             box-shadow: var(--glass-shadow);
             color: var(--secondary-color);
             transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .service-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 15px 0;
+            color: var(--secondary-color);
+        }
+
+        .service-card ul {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        .service-card li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .service-card li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Checkbox for service selection */
+        .service-checkbox {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+        }
+
+        [dir="rtl"] .service-checkbox {
+            left: auto;
+            right: 20px;
+        }
+
+        footer {
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--glass-shadow);
+            width: 100%;
+            color: var(--secondary-color);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--glass-effect);
+            border: 1px solid var(--glass-border);
+            color: var(--secondary-color);
+            font-size: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .copyright {
+            text-align: center;
+            opacity: 0.7;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        /* New sections */
+        .policies-section, .order-section {
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 40px;
+            color: var(--secondary-color);
+        }
+
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 10px;
+        }
+
+        .policies-content {
+            max-height: 300px;
+            overflow-y: auto;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .policies-content h3 {
+            margin: 15px 0 10px;
+        }
+
+        .policies-content ul {
+            margin-right: 20px;
+        }
+
+        .policies-content li {
+            margin-bottom: 8px;
+        }
+
+        .order-summary {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .selected-services {
+            list-style-type: none;
+            margin-bottom: 15px;
+        }
+
+        .selected-services li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .total-price {
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .order-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--glass-border);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--secondary-color);
+            font-size: 16px;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        .submit-btn {
+            background: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-3px);
+        }
+
+        .submit-btn:disabled {
+            background: rgba(255, 255, 255, 0.3);
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* RTL and LTR styles */
+        [dir="rtl"] {
+            text-align: right;
+        }
+
+        [dir="ltr"] {
+            text-align: left;
+        }
+
+        [dir="ltr"] .service-card li {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        [dir="ltr"] .service-card li:before {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="ltr"] .policies-content ul {
+            margin-right: 0;
+            margin-left: 20px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+            }
+            
+            .order-form {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="logo" data-en="MonzirGraphix" data-ar="MonzirGraphix">MonzirGraphix</a>
+            <div class="language-switcher" id="languageSwitcher">
+                <i class="fas fa-globe"></i>
+                <span data-en="Arabic" data-ar="English">English</span>
+            </div>
+        </header>
+
+        <section class="hero">
+            <h1 data-en="Professional Design Services" data-ar="خدمات التصميم الاحترافية">خدمات التصميم الاحترافية</h1>
+            <p data-en="High quality designs at competitive prices" data-ar="تصاميم عالية الجودة بأسعار منافسة">تصاميم عالية الجودة بأسعار منافسة</p>
+        </section>
+
+        <div class="services-grid">
+            <!-- Service Cards -->
+            <div class="service-card" data-price="50">
+                <input type="checkbox" class="service-checkbox" id="service1">
+                <h3 data-en="Logo" data-ar="لوقو">لوقو</h3>
+                <div class="price">$50</div>
+                <p data-en="Professional logo design" data-ar="تصميم لوقو احترافي">تصميم لوقو احترافي</p>
+            </div>
+
+            <div class="service-card" data-price="100">
+                <input type="checkbox" class="service-checkbox" id="service2">
+                <h3 data-en="Identity Package Lite" data-ar="باقة الهوية Lite">باقة الهوية Lite</h3>
+                <div class="price">$100</div>
+                <p data-en="Logo - Pattern - Letterhead - Business Card - Stamp" data-ar="لوقو - نمط او باترن - ورقة مروسة - بطاقة عمل - ختم">لوقو - نمط (باترن) - ورقة مروسة - بطاقة عمل - ختم</p>
+            </div>
+
+            <div class="service-card" data-price="18">
+                <input type="checkbox" class="service-checkbox" id="service3">
+                <h3 data-en="Business Card" data-ar="بطاقة عمل">بطاقة عمل</h3>
+                <div class="price">$18</div>
+                <p data-en="Professional business card design" data-ar="تصميم بطاقة عمل احترافية">تصميم بطاقة عمل احترافية</p>
+            </div>
+
+            <div class="service-card" data-price="18">
+                <input type="checkbox" class="service-checkbox" id="service4">
+                <h3 data-en="Letterhead" data-ar="ورقة مروسة">ورقة مروسة</h3>
+                <div class="price">$18</div>
+                <p data-en="Professional letterhead design" data-ar="تصميم ورقة مروسة احترافية">تصميم ورقة مروسة احترافية</p>
+            </div>
+
+            <div class="service-card" data-price="20">
+                <input type="checkbox" class="service-checkbox" id="service5">
+                <h3 data-en="Invoice" data-ar="فاتورة">فاتورة</h3>
+                <div class="price">$20</div>
+                <p data-en="Professional invoice design" data-ar="تصميم فاتورة احترافية">تصميم فاتورة احترافية</p>
+            </div>
+
+            <div class="service-card" data-price="10">
+                <input type="checkbox" class="service-checkbox" id="service6">
+                <h3 data-en="Social Media Post" data-ar="منشور سوشيال ميديا">منشور سوشيال ميديا</h3>
+                <div class="price">$10</div>
+                <p data-en="Engaging social media post design" data-ar="تصميم منشورات وسائل التواصل الاجتماعي">تصميم منشورات وسائل التواصل الاجتماعي</p>
+            </div>
+
+            <div class="service-card" data-price="40">
+                <input type="checkbox" class="service-checkbox" id="service7">
+                <h3 data-en="Monthly Design Package Lite" data-ar="باقة التصميم الشهرية Lite">باقة التصميم الشهرية Lite</h3>
+                <div class="price">$40</div>
+                <p data-en="4 designs per month" data-ar="٤ تصاميم في الشهر">٤ تصاميم في الشهر</p>
+            </div>
+
+            <div class="service-card" data-price="80">
+                <input type="checkbox" class="service-checkbox" id="service8">
+                <h3 data-en="Monthly Design Package Mid" data-ar="باقة التصميم الشهرية Mid">باقة التصميم الشهرية Mid</h3>
+                <div class="price">$80</div>
+                <p data-en="8 designs per month" data-ar="٨ تصاميم في الشهر">٨ تصاميم في الشهر</p>
+            </div>
+
+            <div class="service-card" data-price="120">
+                <input type="checkbox" class="service-checkbox" id="service9">
+                <h3 data-en="Monthly Design Package Extra" data-ar="باقة التصميم الشهرية Extra">باقة التصميم الشهرية Extra</h3>
+                <div class="price">$120</div>
+                <p data-en="12 designs per month" data-ar="١٢ تصميم في الشهر">١٢ تصميم في الشهر</p>
+            </div>
+
+            <!-- New Services -->
+            <div class="service-card" data-price="15">
+                <input type="checkbox" class="service-checkbox" id="service10">
+                <h3 data-en="Banner Design" data-ar="تصميم لافتة">تصميم لافتة</h3>
+                <div class="price">$15</div>
+                <p data-en="Professional banner design" data-ar="تصميم لافتة احترافية">تصميم لافتة احترافية</p>
+            </div>
+
+            <div class="service-card" data-price="10">
+                <input type="checkbox" class="service-checkbox" id="service11">
+                <h3 data-en="Invoice Design" data-ar="تصميم فاتورة">تصميم فاتورة</h3>
+                <div class="price">$10</div>
+                <p data-en="Professional invoice design" data-ar="تصميم فاتورة احترافية">تصميم فاتورة احترافية</p>
+            </div>
+
+            <div class="service-card" data-price="15">
+                <input type="checkbox" class="service-checkbox" id="service12">
+                <h3 data-en="QR Code with Website" data-ar="تصميم QR Code مع موقع ويب">تصميم QR Code مع موقع ويب</h3>
+                <div class="price">$15</div>
+                <p data-en="QR code integrated with a website containing social media links" data-ar="QR Code مدمج مع موقع ويب يحتوي على روابط التواصل الاجتماعي">QR Code مدمج مع موقع ويب يحتوي على روابط التواصل الاجتماعي</p>
+            </div>
+        </div>
+
+        <section class="policies-section">
+            <h2 class="section-title" data-en="Work Policies" data-ar="سياسات العمل">سياسات العمل</h2>
+            <div class="policies-content">
+                <h3 data-en="General Policies" data-ar="السياسات العامة">السياسات العامة</h3>
+                <ul>
+                    <li data-en="All designs are delivered within the agreed timeframe" data-ar="يتم تسليم جميع التصاميم خلال الإطار الزمني المتفق عليه">يتم تسليم جميع التصاميم خلال الإطار الزمني المتفق عليه</li>
+                    <li data-en="Two rounds of revisions are included in the price" data-ar="يشمل السعر جولتين من المراجعات">يشمل السعر جولتين من المراجعات</li>
+                    <li data-en="Additional revisions will be charged extra" data-ar="سيتم فرض رسوم إضافية على المراجعات الإضافية">سيتم فرض رسوم إضافية على المراجعات الإضافية</li>
+                    <li data-en="Payment is required before starting the work" data-ar="يجب سداد الدفعة قبل بدء العمل">يجب سداد الدفعة قبل بدء العمل</li>
+                </ul>
+                
+                <h3 data-en="Delivery Policy" data-ar="سياسة التسليم">سياسة التسليم</h3>
+                <ul>
+                    <li data-en="Files will be delivered in the requested formats" data-ar="سيتم تسليم الملفات بالصيغ المطلوبة">سيتم تسليم الملفات بالصيغ المطلوبة</li>
+                    <li data-en="Source files are available upon request with additional fee" data-ar="ملفات المصدر متاحة عند الطلب برسوم إضافية">ملفات المصدر متاحة عند الطلب برسوم إضافية</li>
+                </ul>
+                
+                <h3 data-en="Cancellation Policy" data-ar="سياسة الإلغاء">سياسة الإلغاء</h3>
+                <ul>
+                    <li data-en="Cancellation is possible before work begins with full refund" data-ar="يمكن الإلغاء قبل بدء العمل مع استرداد كامل المبلغ">يمكن الإلغاء قبل بدء العمل مع استرداد كامل المبلغ</li>
+                    <li data-en="After work begins, 50% refund is available" data-ar="بعد بدء العمل، يتوفر استرداد 50% من المبلغ">بعد بدء العمل، يتوفر استرداد 50% من المبلغ</li>
+                    <li data-en="No refund after final delivery" data-ar="لا يوجد استرداد بعد التسليم النهائي">لا يوجد استرداد بعد التسليم النهائي</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="order-section">
+            <h2 class="section-title" data-en="Order Services" data-ar="طلب الخدمات">طلب الخدمات</h2>
+            
+            <div class="order-summary">
+                <h3 data-en="Selected Services" data-ar="الخدمات المختارة">الخدمات المختارة</h3>
+                <ul class="selected-services" id="selectedServices">
+                    <li data-en="No services selected" data-ar="لم يتم اختيار أي خدمات">لم يتم اختيار أي خدمات</li>
+                </ul>
+                <div class="total-price" id="totalPrice">$0</div>
+            </div>
+            
+            <form id="orderForm" class="order-form">
+                <div class="form-group">
+                    <label for="name" data-en="Full Name" data-ar="الاسم الكامل">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" required data-en="Enter your full name" data-ar="أدخل اسمك الكامل">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" data-en="Email" data-ar="البريد الإلكتروني">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required data-en="Enter your email" data-ar="أدخل بريدك الإلكتروني">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" data-en="Phone Number" data-ar="رقم الهاتف">رقم الهاتف</label>
+                    <input type="tel" id="phone" name="phone" required data-en="Enter your phone number" data-ar="أدخل رقم هاتفك">
+                </div>
+                
+                <div class="form-group">
+                    <label for="company" data-en="Company/Project Name" data-ar="اسم الشركة/المشروع">اسم الشركة/المشروع</label>
+                    <input type="text" id="company" name="company" data-en="Enter company or project name" data-ar="أدخل اسم الشركة أو المشروع">
+                </div>
+                
+                <div class="form-group full-width">
+                    <label for="details" data-en="Project Details & Requirements" data-ar="تفاصيل المشروع والمتطلبات">تفاصيل المشروع والمتطلبات</label>
+                    <textarea id="details" name="details" data-en="Describe your project details and any specific requirements" data-ar="صف تفاصيل مشروعك وأي متطلبات محددة"></textarea>
+                </div>
+                
+                <div class="checkbox-group full-width">
+                    <input type="checkbox" id="agreePolicies" name="agreePolicies" required>
+                    <label for="agreePolicies" data-en="I agree to the work policies and terms of service" data-ar="أوافق على سياسات العمل وشروط الخدمة">أوافق على سياسات العمل وشروط الخدمة</label>
+                </div>
+                
+                <button type="submit" class="submit-btn" id="submitBtn" data-en="Submit Order" data-ar="إرسال الطلب" disabled>إرسال الطلب</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/monzir_magdi?igsh=Z25paDEybHVzeWM=" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" title="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" title="Behance"><i class="fab fa-behance"></i></a>
+                <a href="https://www.linkedin.com/in/monzirgraphix?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            
+            <div class="contact-info">
+                <p data-en="Contact me:" data-ar="اتصل بي:">اتصل بي:</p>
+                <p>249906332116+</p>
+                <p>201108635843+</p>
+            </div>
+            
+            <div class="copyright">
+                <p data-en="© 2025 MonzirGraphix. All rights reserved." data-ar="© 2025 MonzirGraphix. جميع الحقوق محفوظة.">© 2025 MonzirGraphix. جميع الحقوق محفوظة.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageSwitcher = document.getElementById('languageSwitcher');
+            let currentLanguage = 'ar'; // Default language is Arabic
+            
+            // Switch language function
+            function switchLanguage() {
+                currentLanguage = currentLanguage === 'ar' ? 'en' : 'ar';
+                document.documentElement.lang = currentLanguage;
+                document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+                
+                // Update all elements with data attributes
+                document.querySelectorAll('[data-ar], [data-en]').forEach(element => {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = currentLanguage === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                    } else {
+                        element.textContent = currentLanguage === 'ar' ? element.getAttribute('data-ar') : element.getAttribute('data-en');
+                    }
+                });
+                
+                // Update language switcher text
+                const switcherText = languageSwitcher.querySelector('span');
+                switcherText.textContent = currentLanguage === 'ar' ? 'English' : 'Arabic';
+            }
+            
+            // Add event listener to language switcher
+            languageSwitcher.addEventListener('click', switchLanguage);
+            
+            // Order functionality
+            const serviceCheckboxes = document.querySelectorAll('.service-checkbox');
+            const selectedServicesList = document.getElementById('selectedServices');
+            const totalPriceElement = document.getElementById('totalPrice');
+            const agreePoliciesCheckbox = document.getElementById('agreePolicies');
+            const submitBtn = document.getElementById('submitBtn');
+            const orderForm = document.getElementById('orderForm');
+            
+            let selectedServices = [];
+            let totalPrice = 0;
+            
+            // Update selected services and total price
+            function updateOrderSummary() {
+                selectedServices = [];
+                totalPrice = 0;
+                
+                serviceCheckboxes.forEach(checkbox => {
+                    if (checkbox.checked) {
+                        const serviceCard = checkbox.closest('.service-card');
+                        const serviceName = serviceCard.querySelector('h3').textContent;
+                        const servicePrice = parseInt(serviceCard.getAttribute('data-price'));
+                        
+                        selectedServices.push({
+                            name: serviceName,
+                            price: servicePrice
+                        });
+                        
+                        totalPrice += servicePrice;
+                    }
+                });
+                
+                // Update the selected services list
+                if (selectedServices.length > 0) {
+                    selectedServicesList.innerHTML = '';
+                    selectedServices.forEach(service => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<span>${service.name}</span> <span>$${service.price}</span>`;
+                        selectedServicesList.appendChild(li);
+                    });
+                } else {
+                    selectedServicesList.innerHTML = `<li data-en="No services selected" data-ar="لم يتم اختيار أي خدمات">لم يتم اختيار أي خدمات</li>`;
+                }
+                
+                // Update total price
+                totalPriceElement.textContent = `$${totalPrice}`;
+                
+                // Update submit button state
+                updateSubmitButtonState();
+            }
+            
+            // Update submit button state based on selections and agreement
+            function updateSubmitButtonState() {
+                if (selectedServices.length > 0 && agreePoliciesCheckbox.checked) {
+                    submitBtn.disabled = false;
+                } else {
+                    submitBtn.disabled = true;
+                }
+            }
+            
+            // Add event listeners to service checkboxes
+            serviceCheckboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', updateOrderSummary);
+            });
+            
+            // Add event listener to policies agreement checkbox
+            agreePoliciesCheckbox.addEventListener('change', updateSubmitButtonState);
+            
+            // Handle form submission
+            orderForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real implementation, you would send this data to a server
+                // For now, we'll just show an alert
+                
+                const formData = new FormData(orderForm);
+                const orderData = {
+                    name: formData.get('name'),
+                    email: formData.get('email'),
+                    phone: formData.get('phone'),
+                    company: formData.get('company'),
+                    details: formData.get('details'),
+                    services: selectedServices,
+                    total: totalPrice
+                };
+                
+                // Show confirmation message
+                if (currentLanguage === 'ar') {
+                    alert(`تم استلام طلبك بنجاح! سيتم التواصل معك قريبًا.\n\nالمجموع: $${totalPrice}`);
+                } else {
+                    alert(`Your order has been received successfully! We will contact you soon.\n\nTotal: $${totalPrice}`);
+                }
+                
+                // Reset form
+                orderForm.reset();
+                serviceCheckboxes.forEach(checkbox => checkbox.checked = false);
+                updateOrderSummary();
+            });
+            
+            // Initialize order summary
+            updateOrderSummary();
+        });
+    </script>
+</body>
+    </html>
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 30px;
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            box-shadow: var(--glass-shadow);
+            padding: 20px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .language-switcher {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--glass-effect);
+            padding: 8px 15px;
+            border-radius: 25px;
+            border: 1px solid var(--glass-border);
+            cursor: pointer;
+            color: var(--secondary-color);
+        }
+
+        .language-switcher:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .language-switcher i {
+            font-size: 18px;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: var(--glass-shadow);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--secondary-color);
+            opacity: 0.8;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .service-card {
+            background: var(--glass-effect);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: var(--glass-shadow);
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
         }
 
         .service-card:hover {
