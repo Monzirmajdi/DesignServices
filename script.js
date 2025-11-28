@@ -84,7 +84,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (policyText) {
                         // Simple way to update list items based on the attribute content
                         // Set the innerHTML directly from the data attribute, which contains the <li> elements.
-                        policyList.innerHTML = policyText;
+                        // We need to trim the content to remove leading/trailing whitespace/newlines from the attribute value.
+                        policyList.innerHTML = policyText.trim();
                     }
                 }
             }
